@@ -1,13 +1,5 @@
 <script lang="typescript">
-  type Meetup = {
-    id: string
-    title: string
-    subtitle: string
-    description: string
-    imageUrl: string
-    address: string
-    contactEmail: string
-  }
+  import type { Meetup } from '../types/Meetup'
 
   export let meetup: Meetup
 </script>
@@ -19,7 +11,7 @@
     <p>{meetup.address}</p>
   </header>
   <div class="image">
-    <img src={meetup.imageUrl} alt={meetup.title} />
+    <img src={meetup.imageURL} alt={meetup.title} />
   </div>
   <div class="content">
     <p>{meetup.description}</p>

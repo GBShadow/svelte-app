@@ -1,15 +1,6 @@
 <script lang="ts">
   import MeetupItem from './MeetupItem.svelte'
-
-  type Meetup = {
-    id: string
-    title: string
-    subtitle: string
-    description: string
-    imageUrl: string
-    address: string
-    contactEmail: string
-  }
+  import type { Meetup } from '../types/Meetup'
 
   export let meetups: Meetup[]
 </script>

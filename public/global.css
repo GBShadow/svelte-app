@@ -43,6 +43,10 @@ textarea {
   border-radius: 2px;
 }
 
+textarea {
+  resize: none;
+}
+
 input:disabled {
   color: #ccc;
 }
