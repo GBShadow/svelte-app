@@ -4,6 +4,7 @@
 
   import Header from './UI/Header.svelte'
   import TextInput from './UI/TextInput.svelte'
+  import Button from './UI/Button.svelte'
 
   let meetups: Meetup[] = [
     {
@@ -50,6 +51,14 @@
       },
       ...meetups,
     ]
+
+    id = ''
+    title = ''
+    subtitle = ''
+    description = ''
+    imageURL = ''
+    address = ''
+    contactEmail = ''
   }
 </script>
 
@@ -72,7 +81,7 @@
       id="contactEmail"
       bind:value={contactEmail}
     />
-    <button type="submit">Save</button>
+    <Button type="submit" caption="Save" />
   </form>
 
   <MeetupGrid {meetups} />
@@ -82,5 +91,11 @@
   main {
     margin-top: 5rem;
     padding-bottom: 1rem;
+  }
+
+  form {
+    width: 30rem;
+    max-width: 90%;
+    margin: 0 auto;
   }
 </style>

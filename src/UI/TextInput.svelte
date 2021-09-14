@@ -15,10 +15,23 @@
 </div>
 
 <style>
-  textarea,
-  input {
+  input,
+  textarea {
+    display: block;
+    width: 100%;
+    font: inherit;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    border-radius: 3px 3px 0 0;
+    background: white;
+    padding: 0.15rem 0.25rem;
+    transition: border-color 0.1s ease-out;
+  }
+
+  input:focus,
+  textarea:focus {
     border-color: #e40763;
-    outline: 0;
+    outline: none;
   }
 
   label {

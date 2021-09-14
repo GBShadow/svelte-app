@@ -1,5 +1,6 @@
 <script lang="typescript">
   import type { Meetup } from '../types/Meetup'
+  import Button from '../UI/Button.svelte'
 
   export let meetup: Meetup
 </script>
@@ -17,9 +18,9 @@
     <p>{meetup.description}</p>
   </div>
   <footer>
-    <a href="mailto:{meetup.contactEmail}">Contact</a>
-    <button>Show Details</button>
-    <button>Favorites</button>
+    <Button href="mailto:{meetup.contactEmail}" caption="Contact" />
+    <Button mode="outline" type="button" caption="Favorites" />
+    <Button type="button" caption="Show Details" />
   </footer>
 </article>
 
@@ -80,17 +81,6 @@
 
   div {
     text-align: right;
-  }
-
-  a {
-    border: 1px solid #cf0056;
-    padding: 0.4em;
-    transition: all 0.5s;
-  }
-
-  a:hover {
-    background-color: #cf0056;
-    color: white;
   }
 
   footer {
